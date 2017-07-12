@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log( responseData);
         var catPhoto = document.createElement('img');
         var catPhotoSrc = responseData.cats[0].photo;
+        catPhoto.setAttribute('alt', responseData.cats[0].name);  // set alt
         catPhoto.src = catPhotoSrc;
         document.querySelector('#cat'+catNumber).append(catPhoto);
         catNumber++;
